@@ -1,0 +1,22 @@
+{
+    "pipeline": {
+        "dev": {
+            "dependsOn": [
+                "^test"
+            ],
+            "cache": false
+        },
+        "build": {
+            "dependsOn": [
+                "^build"
+            ],
+            "cache": true
+        },
+        "test": {
+            "dependsOn": [
+                "^test"
+            ],
+            "cache": false
+        }
+    }
+}
