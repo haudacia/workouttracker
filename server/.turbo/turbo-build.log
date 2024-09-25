@@ -1,0 +1,41 @@
+
+
+> server@1.0.0 build
+> turbo run build
+
+[1G[0K[2mturbo 2.1.2[0m
+
+[2m• Packages in scope: server[0m
+[2m• Running [0m[1m[2mbuild[0m[2m in 1 packages
+[0m[2m• Remote caching disabled[0m
+[35mserver:build: [0mcache miss, executing [2m022e86257fbadc0b[0m
+[35mserver:build: [0m
+[35mserver:build: [0m
+[35mserver:build: [0m> server@1.0.0 build
+[35mserver:build: [0m> turbo run build
+[35mserver:build: [0m
+[35mserver:build: [0m[1G[0K[2mturbo 2.1.2[0m
+[35mserver:build: [0m
+[35mserver:build: [0m[2m• Packages in scope: server[0m
+[35mserver:build: [0m[2m• Running [0m[1m[2mbuild[0m[2m in 1 packages
+[35mserver:build: [0m[0m[2m• Remote caching disabled[0m
+[35mserver:build: [0m[35mserver:build: [0mcache miss, executing [2me9148ad125b2f7f5[0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m> server@1.0.0 build[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m> turbo run build[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[1G[0K[2mturbo 2.1.2[0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[2m• Packages in scope: server[0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[2m• Running [0m[1m[2mbuild[0m[2m in 1 packages[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[0m[2m• Remote caching disabled[0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0mcache miss, executing [2m139fe5b9e82e0fbf[0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m> server@1.0.0 build[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m> turbo run build[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[1G[0K[2mturbo 2.1.2[0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m[35mserver:build: [0m
+    ...Finishing writing to cache...                                                                                                                                    [2K[2m>  [0m ...Finishing writing to cache...                                                                                                                                    [2K
