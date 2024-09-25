@@ -1,15 +1,23 @@
 {
   "name": "my-monorepo",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "description": "",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "private": true,
+  "scripts": {
+    "start:client": "dotenv -- turbo run dev --scope='client'",
+    "start:server": "dotenv -- turbo run dev --scope='server'",
+    "dev": "dotenv -- turbo run dev",
+    "test": "cross-env dotenv -- turbo run test"
+  },
+  "packageManager": "npm@10.8.3",
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
     "turbo": "^2.1.2"
   }
 }

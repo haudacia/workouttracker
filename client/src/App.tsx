@@ -1,33 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import { createWorkoutPlan } from './utils/api'
+import WorkoutPlan from './components/WorkoutPlan';
+
+const handleCreateWorkoutPlan = () => {
+  const data = {
+    name: 'bla',
+    dateStart: Date.now(),
+    dateEnd: Date.parse('30 Nov 2024 00:00:00 GMT'),
+    workoutSplit:
+      [
+        {
+          name: 'meso A',
+          target: 'glutes and hamstrings',
+          exercises: [
+            {
+              name: 'deadlift',
+              sets: 3,
+              repsMin: 5,
+              repsMax: 10,
+            },
+            {
+              name: 'barbell unilateral hip thrust',
+              sets: 3,
+              repsMin: 5,
+              repsMax: 10,
+            },
+          ],
+        },
+        {
+          name: 'meso B',
+          exercises: [
+            {
+              name: 'kickbacks',
+              sets: 3,
+              repsMin: 5,
+              repsMax: 10,
+            },
+          ],
+        },
+      ],
+  };
+  console.log(data, 'sending to api');
+  createWorkoutPlan(data)
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
+        <button onClick={() => handleCreateWorkoutPlan()
+        }>criar workout plan</button>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <div id='workout-plan'>
+          <WorkoutPlan />
+
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
