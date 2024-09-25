@@ -4,7 +4,7 @@ import WorkoutPlan from './components/WorkoutPlan';
 
 const handleCreateWorkoutPlan = () => {
   const data = {
-    name: 'bla',
+    name: 'my workout plan',
     dateStart: Date.now(),
     dateEnd: Date.parse('30 Nov 2024 00:00:00 GMT'),
     workoutSplit:
@@ -50,12 +50,8 @@ function App() {
       <div>
         <button onClick={() => handleCreateWorkoutPlan()
         }>criar workout plan</button>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
         <div id='workout-plan'>
           <WorkoutPlan />
-
         </div>
       </div>
     </>
