@@ -30,7 +30,7 @@ function WorkoutPlan() {
                                         <div key={split._id} className=''>
                                             <h3>{split.name}</h3>
                                             <p>{split.target}</p>
-                                            <li>
+                                            {/* <li>
                                                 {split.exercises.map((exercise) => (
                                                     <div key={exercise._id} className='flex flex-row'>
                                                         <p>{exercise.name} /</p>
@@ -39,7 +39,7 @@ function WorkoutPlan() {
 
                                                     </div>
                                                 ))}
-                                            </li>
+                                            </li> */}
                                         </div>
                                     ))}
                                 </li>

@@ -20,5 +20,8 @@
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
     "turbo": "^2.1.2"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.26.2"
   }
 }

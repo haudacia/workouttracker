@@ -1,6 +1,8 @@
 import viteLogo from '/vite.svg'
 import { createWorkoutPlan } from './utils/api'
 import WorkoutPlan from './components/WorkoutPlan';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import Homepage from './pages/Homepage';
 
 const handleCreateWorkoutPlan = () => {
   const data = {
@@ -44,18 +46,18 @@ const handleCreateWorkoutPlan = () => {
   createWorkoutPlan(data)
 }
 
-function App() {
-  return (
-    <>
-      <div>
-        <button onClick={() => handleCreateWorkoutPlan()
-        }>criar workout plan</button>
-        <div id='workout-plan'>
-          <WorkoutPlan />
-        </div>
-      </div>
-    </>
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path='/home' element={<Homepage />} />
+      <Route path='/my-workout-plans' element={<WorkoutPlan />} />
+    </Route>
   )
+);
+
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App
