@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom"
-import NavButton from "./NavButton"
+import CustomButton from "./CustomButton"
 
 function Header() {
     return (
-        <nav className='bg-black h-fit p-4 absolute top-0 w-full'>
+        <nav className='bg-black h-fit p-24 absolute top-0 w-full'>
             <ul className='flex flex-row justify-between'>
-                <li><NavButton text='log new training session' /></li>
-                <li><NavButton text='training history' /></li>
-                <li><NavButton><NavLink to='/my-workout-plans'>my workout plans</NavLink></NavButton></li>
+                <li><CustomButton><NavLink to='/log-session'>log new session</NavLink></CustomButton></li>
+                <li><CustomButton text='training history' /></li>
+                <li><CustomButton><NavLink to='/my-workout-plans'>my workout plans</NavLink></CustomButton></li>
             </ul>
         </nav >
     )

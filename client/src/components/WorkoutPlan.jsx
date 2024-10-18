@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
 import { api } from "../utils/api";
-import { fetchData } from "../utils/api";
+import { fetchTrainingPlans } from "../utils/api";
 import { formatDate } from "../utils/utils";
+import { NavLink } from "react-router-dom";
 
 
 function WorkoutPlan() {
-    const [workoutPlan, setWorkoutPlan] = useState([]); // Inicializa como um array vazio
+    const [workoutPlan, setWorkoutPlan] = useState([]);
 
     useEffect(() => {
-        fetchData()
-            .then(data => setWorkoutPlan(data)) // Define os dados no estado
+        fetchTrainingPlans()
+            .then(data => setWorkoutPlan(data))
             .catch(error => console.error(error));
     }, []);
 
-    console.log(workoutPlan); // Verifica o que está sendo armazenado
+    console.log(workoutPlan);
 
     return (
-        <div>
+        <div className="flex flex-col bg-blue h-screen mx-24 mb-0 m-auto gap-12">
+            <NavLink to='/home' className='text-3xl mt-24'>{'<<'} home</NavLink>
             {
                 workoutPlan.map
                     (plan => (
-                        <div key={plan._id} className='bg-blue-100'>
+                        <div key={plan._id} className=''>
                             <h1 key={plan._id}>{plan.name}</h1>
                             <ul>
                                 <li>{formatDate(plan.dateStart, true)}</li>

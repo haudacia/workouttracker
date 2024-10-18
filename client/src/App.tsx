@@ -3,6 +3,7 @@ import { createWorkoutPlan } from './utils/api'
 import WorkoutPlan from './components/WorkoutPlan';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Homepage from './pages/Homepage';
+import LogSession from './pages/LogSession';
 
 const handleCreateWorkoutPlan = () => {
   const data = {
@@ -51,6 +52,7 @@ const router = createBrowserRouter(
     <Route>
       <Route path='/home' element={<Homepage />} />
       <Route path='/my-workout-plans' element={<WorkoutPlan />} />
+      <Route path='/log-session' element={<LogSession />} />
     </Route>
   )
 );

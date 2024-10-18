@@ -9,7 +9,7 @@ export const api = () => {
     });
 };
 
-export const fetchData = () => {
+export const fetchTrainingPlans = () => {
     return api().get('/trainingPlan')
         .then(response => {
             console.log(response.data);

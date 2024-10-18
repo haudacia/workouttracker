@@ -1,4 +1,4 @@
-import TrainingPlan from "../schemas/workoutSchema.js";
+import TrainingPlan from "../schemas/workout.js";
 
 export const createTrainingPlan = async (req, res) => {
     console.log('Request received:', req.body);
