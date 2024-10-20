@@ -1,4 +1,4 @@
-import TrainingPlan from "../schemas/workout.js";
+import TrainingPlan from "../schemas/trainingPlan.js";
 
 export const createTrainingPlan = async (req, res) => {
     console.log('Request received:', req.body);
@@ -45,7 +45,7 @@ export const getTrainingPlan = (req, res) => {
 };
 
 export const getAllTrainingPlans = (req, res) => {
-    console.log("GET /trainingPlan called");
+    console.log("GET all /trainingPlan called");
     TrainingPlan.find()
         .then(trainingPlans => {
             res.json(trainingPlans); // Retorna os documentos encontrados

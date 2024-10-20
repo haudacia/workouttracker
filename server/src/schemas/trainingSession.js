@@ -1,16 +1,16 @@
 import { Schema, model } from 'mongoose';
 import Exercise from 'exercise.js'
 
-const workoutSessionSchema = new Schema
+const trainingSessionSchema = new Schema
     ({
         datetime: { type: Date },
-        split: { type: Schema.Types.ObjectId, ref: 'Split' },
+        mesocycle: { type: Schema.Types.ObjectId, ref: 'Mesocycle' },
         exercises: [{ type: Schema.Types.ObjectId, ref: 'Exercise' }],
         /* here, I must reference the "absolute" object of each exercise performed
     PLUS the reps,sets and weightloads used?*/
         done: { type: Boolean, default: False }
     })
 
-const workoutSession = model('WorkoutSession', workoutSessionSchema)
+const TrainingSession = model('TrainingSession', trainingSessionSchema)
 
-export default workoutSession
+export default TrainingSession

@@ -7,7 +7,6 @@ const mesocycle = new Schema({
         [
             { type: Schema.Types.ObjectId, ref: 'Exercise' }
         ]
-    // exercises: {type: Schema.Types.ObjectId, ref: 'Exercises'}
 })
 
 const Mesocycle = model('Mesocycle', mesocycle)

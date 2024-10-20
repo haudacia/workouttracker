@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../utils/api";
-import { fetchTrainingPlans } from "../utils/api";
+import { fetchData } from "../utils/api";
 import { formatDate } from "../utils/utils";
 import { NavLink } from "react-router-dom";
 
@@ -9,7 +9,7 @@ function WorkoutPlan() {
     const [workoutPlan, setWorkoutPlan] = useState([]);
 
     useEffect(() => {
-        fetchTrainingPlans()
+        fetchData('/trainingPlan')
             .then(data => setWorkoutPlan(data))
             .catch(error => console.error(error));
     }, []);

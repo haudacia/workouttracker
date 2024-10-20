@@ -9,8 +9,8 @@ export const api = () => {
     });
 };
 
-export const fetchTrainingPlans = () => {
-    return api().get('/trainingPlan')
+export const fetchData = (endpoint) => {
+    return api().get(endpoint)
         .then(response => {
             console.log(response.data);
             return response.data;
@@ -19,7 +19,7 @@ export const fetchTrainingPlans = () => {
             console.error('error fetching data:', error);
             throw error
         });
-};
+}
 
 
 export const createWorkoutPlan = (data) => {
